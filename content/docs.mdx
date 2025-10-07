@@ -1,0 +1,119 @@
+## Getting Started
+
+Coolema is a curated collection of color schemas designed specifically for terminal emulators. Whether you&apos;re using Kitty, Alacritty, Foot, WezTerm, or another terminal, we&apos;ve got you covered.
+
+### How to Use
+
+1.  Browse the schemas collection and find one you like
+2.  Click on a schema to view its details and color palette
+3.  Select your terminal emulator format from the export section
+4.  Copy the configuration or download the config file
+5.  Paste the configuration into your terminal&apos;s config file
+6.  Restart your terminal or reload the configuration
+
+### Terminal Setup
+
+<TerminalSetupBox>
+  <h4>Kitty</h4>
+  <p>Config location: `~/.config/kitty/kitty.conf`</p>
+  <p>
+    Paste the configuration at the end of your config file and restart kitty.
+  </p>
+</TerminalSetupBox>
+
+<TerminalSetupBox>
+  <h4>Alacritty</h4>
+  <p>Config location: `~/.config/alacritty/alacritty.toml`</p>
+  <p>Paste the configuration in your TOML config file and restart Alacritty.</p>
+</TerminalSetupBox>
+
+<TerminalSetupBox>
+  <h4>Foot</h4>
+  <p>Config location: `~/.config/foot/foot.ini`</p>
+  <p>Paste the configuration in the [colors] section and restart Foot.</p>
+</TerminalSetupBox>
+
+<TerminalSetupBox>
+  <h4>WezTerm</h4>
+  <p>Config location: `~/.config/wezterm/wezterm.lua`</p>
+  <p>
+    Save the configuration as a separate .lua file and require it in your main
+    config.
+  </p>
+</TerminalSetupBox>
+
+## Contribution Guide
+
+Coolema is open-source and welcomes contributions from the community. Here&apos;s how you can add your own color schema:
+
+### Adding a Schema
+
+1.  Fork the repository on GitHub
+2.  Create a new MDX file in `content/schemas/` with your schema name (e.g., `my-awesome-theme.mdx`)
+3.  Add YAML frontmatter with the required fields (see example below)
+4.  Ensure you have at least 16 colors (color0 through color15)
+5.  Test your schema locally by running the development server
+6.  Submit a pull request with a clear description of your schema
+
+### Schema Template
+
+```yaml
+---
+title: 'My Awesome Theme'
+description: 'A beautiful dark theme with warm colors'
+author: 'Your Name'
+tags: ['dark', 'warm', 'retro']
+colors:
+  - name: 'color0'
+    hex: '#1a1b26'
+    rgb: 'rgb(26, 27, 38)'
+  - name: 'color1'
+    hex: '#f7768e'
+    rgb: 'rgb(247, 118, 142)'
+  # ... add colors 2-15
+---
+Optional content about your theme goes here.
+```
+
+### Guidelines
+
+- Use descriptive names for your schema
+- Provide accurate color values in both hex and RGB formats
+- Include appropriate tags (dark, light, retro, modern, etc.)
+- Test your schema in at least one terminal emulator
+- Ensure proper contrast for readability
+- Credit original authors if adapting existing themes
+
+## Supported Formats
+
+Coolema currently supports the following terminal emulator formats:
+
+<div className="space-y-4">
+  <TerminalSetupBox>
+    <h4>Kitty (YAML)</h4>
+    <p>
+      Fast, feature-rich terminal emulator with GPU acceleration. Uses a simple
+      key-value format for colors.
+    </p>
+  </TerminalSetupBox>
+  <TerminalSetupBox>
+    <h4>Alacritty (TOML)</h4>
+    <p>
+      Cross-platform, GPU-accelerated terminal emulator. Uses TOML configuration
+      format.
+    </p>
+  </TerminalSetupBox>
+  <TerminalSetupBox>
+    <h4>Foot (INI)</h4>
+    <p>
+      Fast, lightweight Wayland terminal emulator. Uses INI-style configuration.
+    </p>
+  </TerminalSetupBox>
+  <TerminalSetupBox>
+    <h4>WezTerm (Lua)</h4>
+    <p>
+      GPU-accelerated cross-platform terminal emulator. Uses Lua for
+      configuration.
+    </p>
+  </TerminalSetupBox>
+</div>
