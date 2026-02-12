@@ -49,7 +49,7 @@
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.469.0",
-    "next": "^15.1.6",
+    "next": "15.1.11",
     "next-mdx-remote": "^5.0.0",
     "path": "0.12.7",
     "react": "^18.3.1",
